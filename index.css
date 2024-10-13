@@ -1,0 +1,487 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    width: 100%;
+    height: 400px;
+    background: #052F59;
+}
+
+.marquee {
+    font-size: 24px; /* লেখার আকার */
+    color: #E7B641; /* লেখার রং */
+    padding: 0px; /*padding*/
+    background-color:#052F59; /* পেছনের রং */
+    border: 2px solid red; /* সীমানার রং */
+    border-radius: 5px; /* কোণের বৃত্তাকারতা */
+}
+.facebook{
+  text-align: center ;
+  margin-top:0px;
+  
+  
+}
+.icon-design{
+  border-right: 2px solid #E8B643;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius:5px;
+  height: 28px;
+  width: 28px;
+}
+.blank-page{
+  width:100%;
+  height:250px;
+  background-color:white;
+}
+.resize{
+  height:100px;
+  width:160px;
+}
+.image-blank{
+  text-align: center;
+  margin-top:25px;
+}
+.text-resize{
+  font-size:50px;
+  font-weight:bold;
+  font-family: 'Cursive', sans-serif;
+  color:#E6B741;
+}
+.logo-resize{
+  height:120px;
+  width:120px;
+}
+.footer-flex{
+  display:flex;
+}
+.logo-text{
+  padding-top:25px;
+  margin-left:25px;
+  font-family: 'Cursive', sans-serif;
+  font-size:30px;
+  font-weight: bold;
+}
+.color-1{
+  color:#E9D97B;
+}
+.color-2{color:#43B8D6;
+  
+}
+
+
+/* Menu Button */
+.menu-btn {
+    height: 25px;
+    width: 100px;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    position: relative;
+    top: 4px;
+    left: 5px;
+    border-radius: 4px;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.menu-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Side Menu */
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: width 0.5s ease;
+    padding-top: 60px;
+    z-index: 9;
+}
+
+.side-menu .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu ul li {
+    padding: 10px 20px;
+    margin: 10px 0;
+}
+
+.side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+}
+
+/* Hover effects for main menu items */
+.side-menu ul li a:hover {
+    color: #ffffff;
+}
+
+/* Main menu without specific colors */
+.side-menu ul li a {
+    background-color: transparent; /* No specific background color */
+}
+
+/* Submenu style */
+.submenu {
+    display: none; /* Initially hide submenus */
+    padding-left: 20px; /* Indent the submenu */
+}
+
+/* Submenu colorful design */
+.submenu li a {
+    color: #fff; /* White text */
+    background-color: #6a0dad; /* Purple background for submenus */
+    padding: 8px 20px;
+}
+
+/* Hover effect for submenu items */
+.submenu li a:hover {
+    background-color: #ff6347; /* Change to a different color (tomato) on hover */
+    color: #ffffff;
+}
+
+/* Opened submenu arrow */
+.side-menu ul li a.open::after {
+    content: "▼";  /* Down arrow when submenu is open */
+}
+
+/* Content Style */
+.content {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+.content {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.welcome{
+  height:200px;
+  width:100%;
+  margin-top:0 auto ;
+  background:url("https://i.postimg.cc/jj4pYbcv/FB-IMG-1728479635350.jpg");
+  background-image:no repeat;
+  background-position: center ;
+  background-size:cover;
+ 
+}
+
+.word {
+  display: flex;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: 'Cursive', sans-serif;
+}
+
+/* প্রতিটি লেটারের জন্য অ্যানিমেশন */
+.letter {
+  display: inline-block;
+  opacity: 0;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.letter:nth-child(odd) {
+  color: red;
+  animation: bounce 1s ease-in-out forwards;
+}
+
+.letter:nth-child(even) {
+  color: blue;
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+/* পুরো শব্দটির উপর আলো নির্গত হওয়ার ইফেক্ট */
+.word.glow-effect {
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+/* অ্যানিমেশন: আলো জ্বলে-নিভে */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.7), 0 0 60px rgba(255, 255, 255, 1);
+  }
+}
+
+/* অন্যান্য অ্যানিমেশন */
+@keyframes bounce {
+  0% { transform: translateY(50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideIn {
+  0% { transform: translateX(-100px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+.single-icon{
+  height:230px;
+  width:300px;
+  background:#052F59;
+  margin:20px auto;
+  border-radius:5px;
+  box-shadow:0px 2px 6px #4EA1D3;
+  
+}
+.single-icon:hover{
+  border: 15px solid #4EA1D3;
+  background-color:#4EA1D3
+}
+.icon-card{
+  margin-top:250px;
+}
+.white-image {
+  filter: brightness(0) invert(1);
+  height: 180px;
+  width:180px;
+  
+}
+.icon-img{
+  text-align: center ;
+  padding-top:10px;
+}
+.icon-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-top: 0px; /* শীর্ষে কিছু ফাঁকা স্থান */
+}
+.icon-card a{
+  text-decoration:none;
+  
+}
+.pr-message{
+  width:350px;
+  height:1250px;
+  background-color:white;
+  padding-top:25px;
+  margin:0 auto ;
+}
+.pr-pic{
+  height:250px;
+  width:300px;
+  margin:0 auto;
+  border:1px solid #4EA1D3;
+  border-style:dotted;
+  padding: 5px;
+  
+}
+.pr-resize{
+  height:250px;
+  width:300px;
+  
+}
+.pr-heading h1{
+  text-align:center;
+  text-decoration:underline;
+  text-decoration-color:#E8B640;
+}
+.ex-design{
+  font-weight:bold;
+}
+.pr-bio p{text-align: justify;
+  
+}
+.mission{
+  height: 400px;
+  width:340;
+  background-color:#E5E5E5;
+  border:2px solid whitesmoke;
+  margin:20px 20px;
+}
+.mission-bio h2{
+  text-align:left;
+  margin-left:25px;
+  font-family: 'Pacifico', cursive;
+}
+.mission-bio p{
+  text-align: justify;
+  margin-left:25px;
+}
+
+
+
+
+
+.container {
+    display: inline-flex; /* To align goal and arrow in a single row */
+    background-color: #F3F3F3; /* Same background color for both */
+    border-radius: 5px; /* Rounded corners for both */
+    padding: 10px 20px; /* Padding around the text and arrow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    cursor: pointer; /* Pointer cursor for the container */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    color: black; /* White text for both */
+    position: relative;
+    margin-left:30px;
+
+}
+
+.container:hover {
+    background-color:#4EA1D3; /* Darker blue on hover */
+}
+
+.goal {
+    font-weight: bold;
+    margin-right: 150px; /* Space between text and arrow */
+}
+
+.arrow {
+    font-size: 1.2em; /* Slightly larger size */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.arrow.active {
+    background-color: #FF6347; /* Change to tomato color when active */
+}
+
+#info {
+    margin-top: 20px;
+    display: none; /* Initially hidden */
+    background-color: white; /* White background for the paragraph */
+    padding: 15px; /* Padding for the paragraph */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+.mission-nav{
+  margin-top:15px;
+}
+
+
+.header{
+  height: 580px;
+  width:340px;
+  border:0px solid whitesmoke;
+  margin:0px auto;
+}
+.address{
+  height:520px;
+  width:100%;
+  background-color:#5991A2;
+ 
+}
+
+.address {
+    display: flex;
+    justify-content: space-around; /* এক্সট্রা স্পেস দিতে পারে */
+    align-items: center;
+    flex-direction: column; /* কলাম আকারে সাজানোর জন্য */
+    text-align: center; /* লেখাগুলো কেন্দ্রবিন্দু */
+    padding: 0px; /* প্যাডিং যুক্ত করার জন্য */
+}
+
+.icon-address {
+    margin: 10px; /* আইকন ডিভগুলোর মধ্যে স্পেস */
+}
+
+.icon-address img {
+    width: 50px; /* আইকনের আকার */
+    height: 50px;
+    filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(9deg) brightness(90%) contrast(85%); /* আইকনের রঙ পরিবর্তন */
+}
+
+h3 {
+    color:white; /* h3 লেখার রং */
+}
+
+h5 {
+    color:white; /* h5 লেখার রং */
+}
+.background-bio {
+  background-image: url("https://i.postimg.cc/gJW0Q2rj/FB_IMG_1728620840950.jpg"); /* ব্যাকগ্রাউন্ড ইমেজ */
+  background-repeat: no-repeat; /* ইমেজ রিপিট হবে না */
+  background-size: cover; /* ইমেজ পুরো জায়গা জুড়ে থাকবে */
+  width: 340px; /* কন্টেইনারের প্রস্থ */
+  height: 430px; /* কন্টেইনারের উচ্চতা */
+  margin-top:30px;
+  
+}
+
+.background-margin{
+  height:430px;
+  width:340px;
+  background-color: rgba(0, 0, 0,0.8);
+}
+
+.text-header{
+  text-align: center ;
+  color:red;
+  font-family: cursive;
+}
+.again-resize{
+  height:40px;
+  width:40px;
+  border:4 px solid green;
+}
+
+.animated-text {
+  text-align: center ;
+    font-family: 'Cursive', cursive; /* হাতের লেখার স্টাইল */
+    font-size: 4em; /* লেখার আকার */
+    color: red; /* লেখার রং */
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.8), /* আলো */
+                 0 0 10px rgba(255, 0, 0, 0.6), 
+                 0 0 15px rgba(255, 0, 0, 0.4);
+    animation: glow 1.5s infinite alternate; /* এনিমেশন */
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 0, 0, 0.8), 
+                     0 0 10px rgba(255, 0, 0, 0.6), 
+                     0 0 15px rgba(255, 0, 0, 0.4);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(255, 0, 0, 1), 
+                     0 0 20px rgba(255, 0, 0, 0.8), 
+                     0 0 30px rgba(255, 0, 0, 0.6);
+    }
+}
